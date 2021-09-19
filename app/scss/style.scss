@@ -3,6 +3,55 @@
 @import 'reset';
 @import 'global';
 
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section{
+    padding: 72px 0;
+}
+
+.header{
+    background-color: #31352B;
+    
+    &__top{
+        @extend %sans-400;
+        font-size: 13px;
+        line-height: 1.3;
+        color: $w-col;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__contacts{
+        display: flex;
+    }
+
+    &__item{
+        
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+    }
+
+    &__link-img{
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
 
 
 
