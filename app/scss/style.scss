@@ -158,4 +158,148 @@
     }
 }
 
+.footer {
+    background-color: $dark-800;
+    color: $white;
+    @extend %sans-400;
+    font-size: 14px;
+    line-height: 1.4;
+    &__wrapper {
+        padding: 30px 0;
+        & .logo {
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-items: flex-start;
+    }
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 300px;
+    }
+    &__form p {
+        margin-bottom: 18px;
+    }
+    &__form-mail {
+        line-height: 1;
+        background-color: $white;
+        color: #4F4F4F;
+        border-radius: 6px 0 0 6px;
+        max-width: 182px;
+        padding: 12px;
+    }
+    &__btn {
+        background-color: $green-900;
+        color: $white;
+        text-transform: uppercase;
+        @extend %sans-700;
+        font-size: 12px;
+        padding: 12px;
+        border-radius: 0 6px 6px 0;
+    }
+    &__menu {
+        max-width: 470px;
+        width: 100%;
+        height: 108px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        height: 108px;
+        align-content: space-between;
+    }
+    &__item {
+        margin-bottom: 16px;
+    }
+    &__communications {
+        display: flex;
+        flex-direction: column;
+    }
+    &__contacts {
+        margin-bottom: 18px;
+    }
+    &__social-list {
+        display: flex;
+    }
+    &__social {
+        width: 32px;
+        height: 32px;
+    }
+    &__social:not(:last-child) {
+        margin-right: 12px;
+    }
+    &__icon {
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 32px;
+    }
+    &__icon::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 32px;
+        height: 32px;
+    }
+    &__facebook::before {
+        background-image: url('../images/social/facebook.svg');
+    }
+    &__youtube::before {
+        background-image: url('../images/social/youtube.svg');
+    }
+    &__telegram::before {
+        background-image: url('../images/social/telegram.svg');
+    }
+    &__instagram::before {
+        background-image: url('../images/social/instagram.svg');
+    }
+    &__line {
+        height: 1px;
+        background-color: rgba($color: $white, $alpha: 0.1);
+    }
+    &__bottom {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+    }
+    &__banks {
+        display: flex;
+        height: 29px;
+    }
+    &__visa,
+    &__mc {
+        margin-right: 24px;
+        position: relative;
+        width: 93px;
+    }
+    &__cart::before {
+        content: "";
+        height: 29px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    &__visa::before {
+        background-image: url('../images/footer/visa.svg');
+        width: 93px;
+    }
+    &__mc::before {
+        background-image: url('../images/footer/mc.svg');
+        width: 49px;
+    }
+}
+
 @import "media";
