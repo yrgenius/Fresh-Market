@@ -5,90 +5,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <title>Онлайн-маркет Фрешок</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-
-    <header class="header">
+    <div class="hero">
         <div class="container">
-
-            <div class="header__top"> 
-                
+            <header class="header">
                 <ul class="header__contacts">
                     <li class="header__item">
-                        <a class="header__link" href="#">
-                            <img class="header__link-img" src="images/header/icon-del-address.svg" alt="адрес и время доставки">адрес и время доставки</a>
+                        <a class="header__link header__link-del" href="#">адрес и время доставки</a>
                     </li>
                     <li class="header__item">
-                        <a class="header__link" href="#">
-                            <img class="header__link-img" src="images/header/icon-tel.svg" alt="горячая линия">горячая линия 24/7</a>
+                        <a class="header__link header__link-tel" href="#">горячая линия 24/7</a>
                     </li>
                 </ul>
-
                 <nav class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item">доскавка</li>
-                        <li class="menu__item">о нас</li>
-                        <li class="menu__item">новости</li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">доскавка</a></li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">о нас</a></li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">новости</a></li>
                     </ul>
                 </nav>
-            </div>
+            </header>
         </div>
-    </header>
-                
-    <section>
-        <div class="form">
-            <div class="logo">
-                <img class="logo__img" src="images/header/logo.svg" alt="логотип">фрешок онлайн-маркет
-            </div>
-            <div class="form__inner">
-                <div class="form__catalog"></div>
-                <div class="form__seach">
-                    <button class="form__button">поиск</button>
-                </div>
-            </div>
-            <div class="form__icon">
-                <ul class="form__icon-list">
-                    <li class="form__icon-item"><img class="form__icon-img" src="images/header/user-link.svg" alt="аккаунт"></li>
-                    <li class="form__icon-item"><img class="form__icon-img" src="images/header/icon-heart.svg" alt="избранное"></li>
-                    <li class="form__icon-item"><img class="form__icon-img" src="images/header/icon-cart.svg" alt="корзина"></li>
-                </ul>
-            </div>
-        </div>
+    </div>
 
-        <div class="slider">
-            <div class="slider__wrapper">
-                <h1 class="slider__title">свежачок вам в хату<span>скидка -50%</span></h1>
-                <div class="slider__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</div>
-                <a class="slider__btn" href="#">Купить сейчас</a>
-            </div>
-        </div>
+    <section class="form">
+        <div class="container">
 
-            <div class="advantages">
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <h2 class="advantages__title">Бесплатная доставка</h2>
-                        <div class="advantages__text">Для заказов на сумму от 500 ₽  </div>
+            <div class="form__wrapper">
+
+                <a class="logo" href="#">
+                    <img class="logo__img" src="images/header/logo.png" alt="Логотип">
+                </a>
+
+                <form class="form__inner" method="get" autocomplete="off" action="http://localhost:3000">
+                    <select class="form__catalog" name="catalog" placeholder="Каталог продуктов"></select>
+                    <div class="form__search-wrapper">
+                        <input class="form__search" id="form__search" type="text" name="seach" placeholder="Найти в магазине ...">
+                    </div>
+                    <button class="form__button" type="submit">поиск</button>
+                </form>
+
+                <ul class="form__icon">
+                    <li class="form__item">
+                        <a class="form__link form__link-user" href="#"></a>
                     </li>
-                    <li class="advantages__item">
-                        <h2 class="advantages__title">Возврат товара</h2>
-                        <div class="advantages__text">Если товары были испорчены</div>
+                    <li class="form__item">
+                        <a class="form__link form__link-heart" href="#"></a>
                     </li>
-                    <li class="advantages__item">
-                        <h2 class="advantages__title">Поддержка 24/7</h2>
-                        <div class="advantages__text">Лучшие операторы</div>
+                    <li class="form__item">
+                        <a class="form__link form__link-cart" href="#"></a>
                     </li>
                 </ul>
+
             </div>
         </div>
-    </section>       
-            
-    
+    </section>
+
+    <section class="slider">
+        <div class="container">
+            <h1 class="slider__title">свежачок вам в хату<span>скидка -50%</span></h1>
+            <div class="slider__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</div>
+            <a class="slider__btn" href="#">Купить сейчас</a>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <ul class="advantages__list">
+            <li class="advantages__item">
+                <h2 class="advantages__title">Бесплатная доставка</h2>
+                <div class="advantages__text">Для заказов на сумму от 500 ₽ </div>
+            </li>
+            <li class="advantages__item">
+                <h2 class="advantages__title">Возврат товара</h2>
+                <div class="advantages__text">Если товары были испорчены</div>
+            </li>
+            <li class="advantages__item">
+                <h2 class="advantages__title">Поддержка 24/7</h2>
+                <div class="advantages__text">Лучшие операторы</div>
+            </li>
+        </ul>
+    </section>
+
     <section class="products">
         <div class="container">
-            <h2 class="products__title title">топовые товары</h2>       
+            <h2 class="products__title title">топовые товары</h2>
             <ul class="products__filters">
                 <li class="products__category"><button class="products__button">все товары</button></li>
                 <li class="products__category"><button class="products__button">фрукты</button></li>
