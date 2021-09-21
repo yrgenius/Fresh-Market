@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 .section {
     padding: 72px 0;
@@ -155,6 +156,59 @@
     }
     &__link-cart {
         background-image: url('../images/header/icon-cart.svg');
+    }
+}
+
+.slider {
+    background-image: url('../images/slider/slider-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 142px 0;
+    &__item {
+        background-color: rgba($white, 0.8);
+        border-radius: 6px;
+        padding: 24px;
+    }
+    &__title {
+        @extend %ruda-900;
+        color: $dark-500;
+        font-size: 60px;
+        line-height: 1.3;
+        max-width: 760px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    &__title span {
+        display: block;
+        color: $red-900;
+    }
+    &__text {
+        @extend %sans-400;
+        line-height: 1.4;
+        color: $dark-500;
+        margin-bottom: 32px;
+    }
+    &__btn {
+        display: inline-block;
+        @extend %sans-400;
+        font-size: 18px;
+        line-height: 1.3;
+        background-color: $green-900;
+        border-radius: 6px;
+        color: $white;
+        padding: 12px 24px;
+        transition: background-color .3s, box-shadow .3s;
+    }
+    &__btn:hover {
+        background-color: #4D810C;
+    }
+    &__btn:active {
+        background-color: $green-900;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &__btn:focus {
+        box-shadow: 0px 0px 0px 4px $green-200;
     }
 }
 
