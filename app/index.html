@@ -45,7 +45,7 @@
                     <img class="logo__img" src="images/header/logo.png" alt="Логотип">
                 </a>
 
-                <form class="form__inner" method="get" autocomplete="off" action="http://localhost:3000">
+                <form class="form__inner" method="get" autocomplete="off" action="#">
                     <select class="form__catalog" name="catalog" placeholder="Каталог продуктов"></select>
                     <div class="form__search-wrapper">
                         <input class="form__search" id="form__search" type="text" name="seach" placeholder="Найти в магазине ...">
@@ -78,20 +78,22 @@
     </section>
 
     <section class="advantages">
-        <ul class="advantages__list">
-            <li class="advantages__item">
-                <h2 class="advantages__title">Бесплатная доставка</h2>
-                <div class="advantages__text">Для заказов на сумму от 500 ₽ </div>
-            </li>
-            <li class="advantages__item">
-                <h2 class="advantages__title">Возврат товара</h2>
-                <div class="advantages__text">Если товары были испорчены</div>
-            </li>
-            <li class="advantages__item">
-                <h2 class="advantages__title">Поддержка 24/7</h2>
-                <div class="advantages__text">Лучшие операторы</div>
-            </li>
-        </ul>
+        <div class="container">
+            <ul class="advantages__list">
+                <li class="advantages__item">
+                    <h2 class="advantages__title">Бесплатная доставка</h2>
+                    <div class="advantages__text">Для заказов на сумму от 500 ₽ </div>
+                </li>
+                <li class="advantages__item">
+                    <h2 class="advantages__title">Возврат товара</h2>
+                    <div class="advantages__text">Если товары были испорчены</div>
+                </li>
+                <li class="advantages__item">
+                    <h2 class="advantages__title">Поддержка 24/7</h2>
+                    <div class="advantages__text">Лучшие операторы</div>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <section class="products">
@@ -170,7 +172,7 @@
 
                 <div class="footer__inner">
 
-                    <form class="footer__form" method="get" autocomplete="on" action="http://localhost:3000">
+                    <form class="footer__form" method="get" autocomplete="on" action="#">
                         <p>Следите за нашими акциями</p>
                         <input class="footer__form-mail" type="text" placeholder="email@email.com">
                         <button class="footer__btn" type="button">подписаться</button>
