@@ -13,8 +13,18 @@
 
 .container {
     max-width: 1320px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.title {
+    @extend %ruda-600;
+    font-size: 32px;
+    line-height: 1.4;
+    color: $dark-900;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .button {
@@ -85,6 +95,7 @@
 
 .form {
     background-color: $green-900;
+    padding: 0;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -164,6 +175,7 @@
 }
 
 .slider {
+    padding: 0;
     &__item {
         @extend %img;
     }
@@ -200,7 +212,6 @@
         color: $dark-500;
         margin-bottom: 32px;
     }
-    @extend %button;
     .slick-prev,
     .slick-next {
         position: absolute;
@@ -283,6 +294,86 @@
         line-height: 1.4;
         font-size: 14px;
         color: $dark-500;
+    }
+}
+
+.products {
+    &__title {
+        margin: 0 auto 30px;
+    }
+    &__filters {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        margin-bottom: 51px;
+    }
+    &__item:not(:last-child) {
+        margin-right: 24px;
+    }
+    &__category {
+        @extend %sans-700;
+        font-size: 15px;
+        line-height: 1.4;
+        color: $dark-500;
+        text-transform: uppercase;
+        width: fit-content;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            bottom: 0;
+            background-color: $green-900;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        &:hover::before {
+            opacity: .2;
+        }
+    }
+    .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: -12px;
+        margin-right: -12px;
+        margin-bottom: 48px;
+        &__item {
+            border: 1px solid rgba(17, 17, 17, 0.2);
+            border-radius: 6px;
+            max-width: 300px;
+            width: 100%;
+            height: 400px;
+            margin: 0 12px 30px;
+        }
+        &__top {}
+        &__img {
+            @extend %img;
+            background-image: url('../images/products/pineapple.jpg');
+        }
+    }
+    &__more {
+        display: block;
+        margin: 0 auto;
+        @extend %button;
+        background-color: $white;
+        color: $green-900;
+        border: 1px solid $green-900;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        &:hover {
+            background-color: $green-100;
+        }
+        &:active {
+            background-color: $white;
+            box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+        }
+        &:focus {
+            background-color: $white;
+            box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
+        }
     }
 }
 
