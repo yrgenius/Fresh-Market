@@ -15,5 +15,4 @@ $(function() {
         $('.slick-next').css({ 'top': '85%' });
     }
 
-
 });

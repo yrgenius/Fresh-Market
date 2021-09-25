@@ -166,11 +166,36 @@
     &__link-user {
         background-image: url('../images/header/user-link.svg');
     }
+    &__link-heart,
+    &__link-cart {
+        &::before {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: -6px;
+            left: -6px;
+            background-color: $white;
+            border-radius: 50%;
+            color: $red-900;
+            @extend %sans-600;
+            font-size: 10px;
+            line-height: 1;
+            text-align: center;
+            padding: 4px 3px;
+        }
+    }
     &__link-heart {
         background-image: url('../images/header/icon-heart.svg');
+        &::before {
+            content: "12";
+        }
     }
     &__link-cart {
         background-image: url('../images/header/icon-cart.svg');
+        &::before {
+            content: "12";
+        }
     }
 }
 
@@ -342,17 +367,151 @@
         margin-right: -12px;
         margin-bottom: 48px;
         &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             border: 1px solid rgba(17, 17, 17, 0.2);
             border-radius: 6px;
             max-width: 300px;
             width: 100%;
             height: 400px;
             margin: 0 12px 30px;
+            position: relative;
+            .card__top {
+                height: 45px;
+                position: relative;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    text-transform: uppercase;
+                    letter-spacing: 0.03em;
+                    color: $white;
+                    @extend %sans-700;
+                    font-size: 10px;
+                    line-height: 1;
+                    padding: 3px 6px;
+                    height: 16px;
+                    left: 12px;
+                    border-radius: 6px;
+                }
+                @extend %heart;
+            }
+            .card__img {
+                @extend %img;
+                height: 215px;
+            }
+            .card__descr {
+                @extend %sans-600;
+                font-size: 14px;
+                line-height: 1.4;
+                // padding: 0 18px;
+                margin: 18px;
+                color: $dark-900;
+            }
+            .card__bottom {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 18px 18px;
+            }
+            .card__price {
+                span {
+                    color: $silver-600;
+                    display: block;
+                    height: 14px;
+                    margin-bottom: 3px;
+                    position: relative;
+                }
+            }
+            .card__button {
+                width: 32px;
+                height: 32px;
+                border-radius: 6px;
+                position: relative;
+                background-color: $green-900;
+                &::before {
+                    @extend %basket;
+                }
+            }
         }
-        &__top {}
-        &__img {
-            @extend %img;
-            background-image: url('../images/products/pineapple.jpg');
+        &__item:nth-child(1) {
+            .card__top {
+                &::before {
+                    @extend %badge-new;
+                }
+                &::after {
+                    @extend %badge-50;
+                    top: 34px;
+                }
+            }
+            .card__img {
+                background-image: url('../images/products/pineapple.jpg');
+            }
+            @extend %cross-line;
+        }
+        &__item:nth-child(2) {
+            .card__img {
+                background-image: url('../images/products/lemon.jpg');
+            }
+        }
+        &__item:nth-child(3) {
+            .card__top {
+                &::before {
+                    @extend %badge-hit;
+                    top: 12px;
+                }
+            }
+            .card__img {
+                background-image: url('../images/products/dragonfruit.jpg');
+            }
+        }
+        &__item:nth-child(4) {
+            .card__top {
+                &::before {
+                    @extend %badge-new;
+                }
+            }
+            .card__img {
+                background-image: url('../images/products/paprik.jpg');
+            }
+        }
+        &__item:nth-child(5) {
+            .card__top {
+                &::before {
+                    @extend %badge-hit;
+                    top: 12px;
+                }
+            }
+            .card__img {
+                background-image: url('../images/products/carrot.jpg');
+            }
+        }
+        &__item:nth-child(6) {
+            .card__top {
+                &::before {
+                    @extend %badge-30;
+                    top: 12px;
+                }
+            }
+            .card__img {
+                background-image: url('../images/products/juice.jpg');
+            }
+            @extend %cross-line;
+        }
+        &__item:nth-child(7) {
+            .card__top {
+                &::before {
+                    @extend %badge-new;
+                }
+            }
+            .card__img {
+                background-image: url('../images/products/coffee.jpg');
+            }
+        }
+        &__item:nth-child(8) {
+            .card__img {
+                background-image: url('../images/products/ketchup.jpg');
+            }
         }
     }
     &__more {

@@ -78,3 +78,76 @@ $white: #FFFFFF;
     background-size: cover;
     height: 100%;
 }
+
+%badge-new {
+    content: "новинка";
+    width: 66px;
+    top: 12px;
+    background: $green-900;
+}
+
+%badge-hit {
+    content: "хит";
+    width: 34px;
+    background: $orange-900;
+}
+
+%badge-30 {
+    content: "-30%";
+    width: 37px;
+    background: $red-900;
+}
+
+%badge-50 {
+    content: "-50%";
+    width: 37px;
+    background: $red-900;
+}
+
+%basket {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    top: 8px;
+    right: 8px;
+    @extend %img;
+    background-image: url('../images/products/icon-cart.svg');
+}
+
+%cross-line {
+    .card__price {
+        span {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                border-top: 1px solid $silver-600;
+                transform: rotate(160deg);
+                transform-origin: left top;
+            }
+        }
+    }
+}
+
+%heart {
+    .heart {
+        content: "";
+        position: absolute;
+        background-image: url('../images/products/icon-heart.svg');
+        width: 32px;
+        height: 29px;
+        top: 17px;
+        right: 12px;
+        &:hover {
+            content: "";
+            position: absolute;
+            background-image: url('../images/products/icon-heart-hover.svg');
+            width: 32px;
+            height: 29px;
+            top: 17px;
+            right: 12px;
+        }
+    }
+}

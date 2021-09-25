@@ -121,60 +121,97 @@
         <div class="container">
             <h2 class="products__title title">топовые товары</h2>
             <ul class="products__filters">
-                <li class="products__item"><button class="products__category" type="button">все товары</button></li>
-                <li class="products__item"><button class="products__category" type="button">фрукты</button></li>
-                <li class="products__item"><button class="products__category" type="button">овощи</button></li>
-                <li class="products__item"><button class="products__category" type="button">напитки</button></li>
-                <li class="products__item"><button class="products__category" type="button">бакалея</button></li>
+                <li class="products__item">
+                    <button class="products__category" type="button" data-filter="all">все товары</button></li>
+                <li class="products__item">
+                    <button class="products__category" type="button" data-filter=".categori-fruits">фрукты</button></li>
+                <li class="products__item">
+                    <button class="products__category" type="button" data-filter=".categori-veget">овощи</button></li>
+                <li class="products__item">
+                    <button class="products__category" type="button" data-filter=".categori-juice">напитки</button></li>
+                <li class="products__item">
+                    <button class="products__category" type="button" data-filter=".categori-grocery">бакалея</button></li>
             </ul>
             <ul class="card">
-                <li class="card__item">
-                    <div class="card__top"></div>
+                <li class="card__item mix categori-fruits">
+                    <div class="card__top"><img class="heart"></div>
                     <div class="card__img"></div>
-                    <div class="card__descr"></div>
-                    <div class="card__price"><span></span></div>
+                    <div class="card__descr">Ананас, 1кг</div>
+                    <div class="card__bottom">
+                        <div class="card__price"><span>1999 &#8381;</span>999 &#8381;</div>
+                        <div class="card__button"></div>
+                    </div>
+
                 </li>
-                <li class="card__item">
-                    <div class="card__top"></div>
+                <li class="card__item mix categori-fruits">
+                    <div class="card__top"><img class="heart"></div>
                     <div class="card__img"></div>
-                    <div class="card__descr"></div>
-                    <div class="card__price"><span></span></div>
+                    <div class="card__descr">Лимон, 1кг</div>
+                    <div class="card__bottom">
+                        <div class="card__price"><span></span>199 &#8381</div>
+                        <div class="card__button"></div>
+                    </div>
+
                 </li>
-                <li class="card__item">
-                    <div class="card__top"></div>
+                <li class="card__item mix categori-fruits">
+                    <div class="card__top"><img class="heart"></div>
                     <div class="card__img"></div>
-                    <div class="card__descr"></div>
-                    <div class="card__price"><span></span></div>
+                    <div class="card__descr">Питахайя красная с белой мякотью, 1шт</div>
+                    <div class="card__bottom">
+                        <div class="card__price"><span></span>1019 &#8381</div>
+                        <div class="card__button"></div>
+                    </div>
+
                 </li>
-                <li class="card__item">
-                    <div class="card__top"></div>
+                <li class="card__item mix categori-veget">
+                    <div class="card__top"><img class="heart"></div>
                     <div class="card__img"></div>
-                    <div class="card__descr"></div>
-                    <div class="card__price"><span></span></div>
+                    <div class="card__descr">Перец оранжевый, 1кг</div>
+                    <div class="card__bottom">
+                        <div class="card__price"><span></span>349 &#8381</div>
+                        <div class="card__button"></div>
+                    </div>
+
                 </li>
-                <li class="card__item">
-                    <div class="card__top"></div>
+                <li class="card__item mix categori-veget">
+                    <div class="card__top"><img class="heart"></div>
                     <div class="card__img"></div>
-                    <div class="card__descr"></div>
-                    <div class="card__price"><span></span></div>
+                    <div class="card__descr">Морковь молодая с бабушкиной грядки, 1кг</div>
+                    <div class="card__bottom">
+                        <div class="card__price"><span></span>49 &#8381</div>
+                        <div class="card__button"></div>
+                    </div>
+
                 </li>
-                <li class="card__item">
-                    <div class="card__top"></div>
+                <li class="card__item mix categori-juice">
+                    <div class="card__top"><img class="heart"></div>
                     <div class="card__img"></div>
-                    <div class="card__descr"></div>
-                    <div class="card__price"><span></span></div>
+                    <div class="card__descr">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...</div>
+                    <div class="card__bottom">
+                        <div class="card__price"><span>299 &#8381</span>199 &#8381</div>
+                        <div class="card__button"></div>
+                    </div>
+
                 </li>
-                <li class="card__item">
-                    <div class="card__top"></div>
+                <li class="card__item mix categori-grocery">
+                    <div class="card__top"><img class="heart"></div>
                     <div class="card__img"></div>
-                    <div class="card__descr"></div>
-                    <div class="card__price"><span></span></div>
+                    <div class="card__descr">Кофе с коноплей органический Caffé Salomoni 250г</div>
+                    <div class="card__bottom">
+                        <div class="card__price"><span></span>877 &#8381</div>
+                        <div class="card__button"></div>
+                    </div>
+
                 </li>
-                <li class="card__item">
-                    <div class="card__top"></div>
+                <li class="card__item mix categori-grocery">
+                    <div class="card__top"><img class="heart"></div>
                     <div class="card__img"></div>
-                    <div class="card__descr"></div>
-                    <div class="card__price"><span></span></div>
+                    <div class="card__descr">Кетчуп томатный детский органический Bio-Zentrale 500мл</div>
+                    <div class="card__bottom">
+                        <div class="card__price"><span></span>600 &#8381</div>
+                        <div class="card__button"></div>
+                    </div>
+
                 </li>
             </ul>
 
