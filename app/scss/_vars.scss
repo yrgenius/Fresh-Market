@@ -50,6 +50,29 @@ $white: #FFFFFF;
     font-weight: 900;
 }
 
+%subtitle-menu {
+    @extend %sans-700;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $dark-500;
+    text-transform: uppercase;
+    width: fit-content;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        bottom: 0;
+        background-color: $green-900;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    &:hover::before {
+        opacity: .2;
+    }
+}
+
 %button {
     display: inline-block;
     @extend %sans-400;
@@ -69,6 +92,50 @@ $white: #FFFFFF;
     }
     &:focus {
         box-shadow: 0px 0px 0px 4px $green-200;
+    }
+}
+
+%badge {
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: $white;
+        @extend %sans-700;
+        font-size: 10px;
+        line-height: 1;
+        padding: 3px 6px;
+        height: 16px;
+        left: 12px;
+        border-radius: 6px;
+    }
+}
+
+%star {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: $dark-500;
+        @extend %sans-700;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: left;
+        padding: 1px;
+        width: 40px;
+        height: 16px;
+        right: 12px;
+        left: auto;
+        bottom: 12px;
+        background-image: url('../images/promo/star.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right center;
     }
 }
 

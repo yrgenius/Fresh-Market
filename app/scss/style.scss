@@ -352,26 +352,7 @@
         margin-right: 24px;
     }
     &__category {
-        @extend %sans-700;
-        font-size: 15px;
-        line-height: 1.4;
-        color: $dark-500;
-        text-transform: uppercase;
-        width: fit-content;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            bottom: 0;
-            background-color: $green-900;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        &:hover::before {
-            opacity: .2;
-        }
+        @extend %subtitle-menu;
     }
     .card {
         display: flex;
@@ -394,24 +375,9 @@
             position: relative;
             .card__top {
                 height: 45px;
-                position: relative;
-                &::before,
-                &::after {
-                    content: "";
-                    position: absolute;
-                    text-transform: uppercase;
-                    letter-spacing: 0.03em;
-                    color: $white;
-                    @extend %sans-700;
-                    font-size: 10px;
-                    line-height: 1;
-                    padding: 3px 6px;
-                    height: 16px;
-                    left: 12px;
-                    border-radius: 6px;
-                }
-                @extend %heart;
+                @extend %badge;
             }
+            @extend %heart;
             .card__img {
                 @extend %img;
                 height: 215px;
@@ -550,56 +516,242 @@
             box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
         }
     }
-    .banners {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-transform: uppercase;
-        &__item {
-            width: 300px;
-            padding: 76px 32px;
-            @extend %img;
-            border-radius: 6px;
-            color: $dark-500;
-            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
-            &:not(:last-child) {
-                margin-right: 30px;
-            }
+}
+
+.banners {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    &__item {
+        width: 300px;
+        padding: 76px 32px;
+        @extend %img;
+        border-radius: 6px;
+        color: $dark-500;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+        &:not(:last-child) {
+            margin-right: 30px;
         }
-        &__subtitle {
-            @extend %sans-700;
-            font-size: 12px;
-            line-height: 1;
-            margin-bottom: 18px;
-        }
-        &__title {
-            color: $dark-500;
-            font-size: 30px;
-            margin-bottom: 12px;
-            text-align: left;
-        }
-        &__link {
-            font-size: 14px;
-            border-bottom: 2px solid $dark-500;
-            padding-bottom: 6px;
-        }
-        &__item:nth-child(1) {
-            width: 630px;
-            background-image: url('../images/banners/fruits.jpg');
+    }
+    &__subtitle {
+        @extend %sans-700;
+        font-size: 12px;
+        line-height: 1;
+        margin-bottom: 18px;
+    }
+    &__title {
+        color: $dark-500;
+        font-size: 30px;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+    &__link {
+        font-size: 14px;
+        border-bottom: 2px solid $dark-500;
+        padding-bottom: 6px;
+    }
+    &__item:nth-child(1) {
+        width: 630px;
+        background-image: url('../images/banners/fruits.jpg');
+        color: $white;
+        .banners__title {
             color: $white;
-            .banners__title {
-                color: $white;
-            }
-            .banners__link {
-                border-color: $white;
-            }
         }
-        &__item:nth-child(2) {
-            background-image: url('../images/banners/veg.jpg');
+        .banners__link {
+            border-color: $white;
         }
-        &__item:nth-child(3) {
-            background-image: url('../images/banners/bread.jpg');
+    }
+    &__item:nth-child(2) {
+        background-image: url('../images/banners/veg.jpg');
+    }
+    &__item:nth-child(3) {
+        background-image: url('../images/banners/bread.jpg');
+    }
+}
+
+.promo {
+    text-align: center;
+    background-color: #F5F5F5;
+    &__title {
+        margin-bottom: 32px;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 48px;
+    }
+    &__category:not(:last-child) {
+        margin-right: 24px;
+    }
+    &__button {
+        @extend %subtitle-menu;
+    }
+    &__content {
+        margin-bottom: 48px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    &__item {
+        background-color: $white;
+        border-radius: 6px;
+        border: 1px solid $silver-600;
+        padding: 13px 12px 11px;
+        @extend %badge;
+        @extend %star;
+        text-align: left;
+        letter-spacing: 0.03em;
+        display: grid;
+        grid-template: 1fr auto auto / 100px 1fr 1fr;
+        // column-gap: 12px;
+    }
+    &__item:nth-child(1) {
+        &::before {
+            @extend %badge-new;
+            top: 13px;
+            left: 12px;
         }
+        &::after {
+            content: "4.5";
+            right: 12px;
+        }
+        .promo__avail {
+            color: $green-900;
+            ;
+        }
+    }
+    &__item:nth-child(2) {
+        &::before {
+            @extend %badge-new;
+            top: 13px;
+            left: 12px;
+        }
+        &::after {
+            content: "4.9";
+        }
+        .promo__avail {
+            color: $red-900;
+            ;
+        }
+    }
+    &__item:nth-child(3) {
+        &::before {
+            @extend %badge-new;
+            top: 13px;
+            left: 12px;
+        }
+        &::after {
+            content: "5.0";
+        }
+        .promo__avail {
+            color: $silver-600;
+            ;
+        }
+    }
+    &__item:nth-child(4) {
+        &::before {
+            @extend %badge-new;
+            top: 13px;
+            left: 12px;
+        }
+        &::after {
+            content: "5.0";
+        }
+        .promo__avail {
+            color: $green-900;
+            ;
+        }
+    }
+    &__item:nth-child(5) {
+        &::before {
+            @extend %badge-new;
+            top: 13px;
+            left: 12px;
+        }
+        &::after {
+            content: "4.5";
+        }
+        .promo__avail {
+            color: $green-900;
+            ;
+        }
+    }
+    &__item:nth-child(6) {
+        &::before {
+            @extend %badge-hit;
+            top: 13px;
+            left: 12px;
+        }
+        &::after {
+            content: "4.9";
+        }
+        .promo__avail {
+            color: $red-900;
+            ;
+        }
+    }
+    &__item:nth-child(7) {
+        &::before {
+            @extend %badge-hit;
+            top: 13px;
+            left: 12px;
+        }
+        &::after {
+            content: "4.8";
+        }
+        .promo__avail {
+            color: $green-900;
+            ;
+        }
+    }
+    &__item:nth-child(8) {
+        &::before {
+            @extend %badge-hit;
+            top: 13px;
+            left: 12px;
+        }
+        &::after {
+            content: "4.6";
+        }
+        .promo__avail {
+            color: $green-900;
+            ;
+        }
+    }
+    &__img {
+        grid-row: span 3;
+    }
+    &__item-title {
+        text-align: left;
+        justify-self: start;
+        margin-bottom: 7px;
+        grid-column: span 2;
+    }
+    &__avail {
+        text-transform: uppercase;
+        @extend %sans-600;
+        font-size: 10px;
+        line-height: 1;
+        margin-bottom: 4px;
+        grid-column: span 2;
+    }
+    &__price {
+        @extend %sans-600;
+        font-size: 20px;
+        line-height: 1;
+    }
+    &__price span {
+        font-size: 14px;
+        margin-right: 12px;
+    }
+    &__old-price {
+        @extend %sans-400;
+        font-size: 12px;
+        line-height: 1;
+        margin-right: 40px;
+        align-self: end;
     }
 }
 
