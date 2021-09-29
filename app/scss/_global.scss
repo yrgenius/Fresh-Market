@@ -1,0 +1,23 @@
+.section {
+    padding: 72px 0;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title {
+    @extend %ruda-600;
+    font-size: 32px;
+    line-height: 1.4;
+    color: $dark-900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.button {
+    @extend %button;
+}

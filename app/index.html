@@ -11,82 +11,77 @@
 </head>
 
 <body>
-    <div class="hero">
-        <div class="container">
-            <header class="header">
+    <header class="header">
+
+        <div class="header__top">
+            <div class="container">
                 <ul class="header__contacts">
+                    <li class="header__item header__item--del">
+                        <a class="header__link" href="#">адрес и время доставки</a></li>
+                    <li class="header__item header__item--tel">
+                        <a class="header__link" href="#">горячая линия 24/7</a></li>
                     <li class="header__item">
-                        <a class="header__link header__link-del" href="#">адрес и время доставки</a>
-                    </li>
+                        <a class="header__link" href="#">доскавка</a></li>
                     <li class="header__item">
-                        <a class="header__link header__link-tel" href="#">горячая линия 24/7</a>
-                    </li>
+                        <a class="header__link" href="#">о нас</a></li>
+                    <li class="header__item">
+                        <a class="header__link" href="#">новости</a></li>
                 </ul>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">доскавка</a></li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">о нас</a></li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">новости</a></li>
-                    </ul>
-                </nav>
-            </header>
+            </div>      
         </div>
-    </div>
 
-    <section class="form">
-        <div class="container">
+        <div class="header__bottom">
+            <div class="container">
+                <nav class="header__inner">
+        
+                    <a class="logo" href="#">
+                        <img class="logo__img" src="images/header/logo.png" alt="Логотип">
+                    </a>
+    
+                    <div class="header__catalog">Каталог продуктов</div>
 
-            <div class="form__wrapper">
-
-                <a class="logo" href="#">
-                    <img class="logo__img" src="images/header/logo.png" alt="Логотип">
-                </a>
-
-                <form class="form__inner" method="get" autocomplete="off" action="#">
-                    <select class="form__catalog" name="catalog" placeholder="Каталог продуктов">
-                        <option value="#">Каталог продуктов</option>
-                        <option value="#">Овощи и фрукты</option>
-                        <option value="#">Бакалея</option>
-                        <option value="#">Молочные продукты</option>
-                        <option value="#">Хлеб</option>
-                        <option value="#">Мясо</option>
-                        <option value="#">Колбаса</option>
-                        <option value="#">Рыба</option>
-                        <option value="#">Алкоголь</option>
-                        <option value="#">Напитки</option>
-                        <option value="#">Торты</option>
-                        <option value="#">Мясо</option>
-                        <option value="#">Чай, кофе</option>
-                    </select>
-                    <div class="form__search-wrapper">
-                        <input class="form__search" id="form__search" type="text" name="seach" placeholder="Найти в магазине ...">
-                    </div>
-                    <button class="form__button" type="submit">поиск</button>
-                </form>
-
-                <ul class="form__icon">
-                    <li class="form__item">
-                        <a class="form__link form__link-user" href="#"></a>
-                    </li>
-                    <li class="form__item">
-                        <a class="form__link form__link-heart" href="#"></a>
-                    </li>
-                    <li class="form__item">
-                        <a class="form__link form__link-cart" href="#"></a>
-                    </li>
-                </ul>
-
+                    <ul class="header__list">
+                        <li class="header__choice">Каталог продуктов</li>
+                        <li class="header__choice">Овощи и фрукты</li>
+                        <li class="header__choice">Бакалея</li>
+                        <li class="header__choice">Молочные продукты</li>
+                        <li class="header__choice">Хлеб</li>
+                        <li class="header__choice">Мясо</li>
+                        <li class="header__choice">Колбаса</li>
+                        <li class="header__choice">Рыба</li>
+                        <li class="header__choice">Алкоголь</li>
+                        <li class="header__choice">Напитки</li>
+                        <li class="header__choice">Торты</li>
+                        <li class="header__choice">Мясо</li>
+                        <li class="header__choice">Чай, кофе</li>
+                    </ul>
+                    
+                    <form class="header__form">
+                        <input class="header__search" id="form__search" type="text" name="seach" placeholder="Найти в магазине ...">
+                        <button class="header__button" type="submit">поиск</button>
+                    </form>
+    
+                    <ul class="header__icons">
+                        <li class="header__icon">
+                            <a class="header__icon-link header__link--user" href="#"></a>
+                        </li>
+                        <li class="header__icon">
+                            <a class="header__icon-link header__link--heart" href="#"></a>
+                        </li>
+                        <li class="header__icon">
+                            <a class="header__icon-link header__link--cart" href="#"></a>
+                        </li>
+                    </ul>
+            
+                </nav>
             </div>
         </div>
-    </section>
+    </header>
 
     <section class="slider">
 
         <ul class="slider__wrapper">
-            <li class="slider__item slider__item1">
+            <li class="slider__item" style="background-image: url(images/slider/slider-bg1.jpg);">
                 <div class="container">
                     <h1 class="slider__title">свежачок вам в хату<span>скидка -50%</span></h1>
                     <div class="slider__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</div>
@@ -94,7 +89,7 @@
                 </div>
 
             </li>
-            <li class="slider__item slider__item2">
+            <li class="slider__item" style="background-image: url(images/slider/slider-bg2.jpg);">
                 <div class="container">
                     <h1 class="slider__title">накрути себе томатов<span>акция: 3 кг по цене 1</span></h1>
                     <div class="slider__text">Только с 12 по 15 июля скидка на домашние помидорчики</div>
@@ -102,7 +97,7 @@
                 </div>
 
             </li>
-            <li class="slider__item slider__item3">
+            <li class="slider__item" style="background-image: url(images/slider/slider-bg3.jpg);">
                 <div class="container">
                     <h1 class="slider__title">пусть остальные <br>пезеленеют от зависти<span>распродажа зелени</span></h1>
                     <a class="button" href="#">Купить сейчас</a>
