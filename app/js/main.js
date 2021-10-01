@@ -31,6 +31,11 @@ $(function() {
         }
 
     });
+    
+    $('.slider__wrapper').slick({
+        dots: false,
+        arrows: true
+    });
 
     if (screenWidth - 240 > 1370) {
         $('.slick-prev').css({ 'top': '50%' });
@@ -40,9 +45,5 @@ $(function() {
         $('.slick-next').css({ 'top': '85%' });
     }
 
-    $('.slider__wrapper').slick({
-        dots: false,
-        arrows: true
-    });
 
 });

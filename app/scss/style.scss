@@ -5,411 +5,9 @@
 @import "global";
 
 @import "header";
-
-.slider {
-    padding: 0;
-    &__item {
-        @extend %img;
-    }
-
-    .container {
-        background-color: rgba($white, 0.8);
-        border-radius: 6px;
-        margin: 142px auto;
-        padding: 12px;
-    }
-
-    &__title {
-        @extend %ruda-900;
-        color: $dark-500;
-        font-size: 60px;
-        line-height: 1.3;
-        text-transform: uppercase;
-        margin-bottom: 12px;
-    }
-
-    &__title span {
-        display: block;
-        color: $red-900;
-    }
-
-    &__text {
-        @extend %sans-400;
-        line-height: 1.4;
-        color: $dark-500;
-        margin-bottom: 32px;
-    }
-
-    .slick-prev,
-    .slick-next {
-        position: absolute;
-        font-size: 0;
-        width: 60px;
-        height: 60px;
-        transform: translateY(-30px);
-        border-radius: 6px;
-        background-color: rgba($white, 0.8);
-        z-index: 1;
-
-        &::before {
-            content: "";
-            position: absolute;
-            @extend %img;
-            top: 14px;
-            left: 20px;
-            width: 19px;
-            height: 32px;
-            z-index: 2;
-        }
-    }
-    .slick-prev {
-        left: 60px;
-
-        &::before {
-            background-image: url("../images/slider/arrow-left.svg");
-        }
-    }
-
-    .slick-next {
-        right: 60px;
-
-        &::before {
-            background-image: url("../images/slider/arrow-right.svg");
-        }
-    }
-}
-
-.advantages {
-    padding: 51px 0;
-
-    & .container {
-        max-width: 877px;
-    }
-
-    background-color: $silver-100;
-    width: 100%;
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__item {
-        padding-left: 74px;
-        position: relative;
-    }
-
-    &__item::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50px;
-        height: 50px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-
-    &__item:nth-child(1)::before {
-        background-image: url("../images/advantages/scooter.svg");
-    }
-
-    &__item:nth-child(2)::before {
-        background-image: url("../images/advantages/return-box.svg");
-    }
-
-    &__item:nth-child(3)::before {
-        background-image: url("../images/advantages/hours.svg");
-    }
-
-    &__title {
-        @extend %sans-600;
-        line-height: 1.4;
-        font-size: 16px;
-        color: $dark-900;
-        margin-bottom: 6px;
-    }
-
-    &__text {
-        @extend %sans-400;
-        line-height: 1.4;
-        font-size: 14px;
-        color: $dark-500;
-    }
-}
-
-.products {
-    &__title {
-        margin: 0 auto 30px;
-    }
-
-    &__filters {
-        display: flex;
-        justify-content: center;
-    }
-
-    &__item {
-        margin-bottom: 51px;
-    }
-
-    &__item:not(:last-child) {
-        margin-right: 24px;
-    }
-
-    &__category {
-        @extend %subtitle-menu;
-    }
-
-    .card {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-left: -12px;
-        margin-right: -12px;
-        margin-bottom: 20px;
-        &__item {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: 1px solid rgba(17, 17, 17, 0.2);
-            border-radius: 6px;
-            max-width: 300px;
-            width: 100%;
-            height: 400px;
-            margin: 0 12px 30px;
-            position: relative;
-
-            .card__top {
-                height: 45px;
-                @extend %badge;
-            }
-
-            @extend %heart;
-            .card__img {
-                @extend %img;
-                height: 215px;
-            }
-
-            .card__descr {
-                @extend %sans-600;
-                font-size: 14px;
-                line-height: 1.4;
-                // padding: 0 18px;
-                margin: 18px;
-                color: $dark-900;
-                text-align: start;
-            }
-
-            .card__bottom {
-                display: flex;
-                justify-content: space-between;
-                margin: 0 18px 18px;
-            }
-
-            .card__price {
-                span {
-                    color: $silver-600;
-                    display: block;
-                    height: 14px;
-                    margin-bottom: 3px;
-                    position: relative;
-                }
-            }
-
-            .card__button {
-                width: 32px;
-                height: 32px;
-                border-radius: 6px;
-                position: relative;
-                background-color: $green-900;
-
-                &::before {
-                    @extend %basket;
-                }
-            }
-        }
-
-        &__item:nth-child(1) {
-            .card__top {
-                &::before {
-                    @extend %badge-new;
-                }
-
-                &::after {
-                    @extend %badge-50;
-                    top: 34px;
-                }
-            }
-
-            .card__img {
-                background-image: url("../images/products/pineapple.jpg");
-            }
-
-            @extend %cross-line;
-        }
-
-        &__item:nth-child(2) {
-            .card__img {
-                background-image: url("../images/products/lemon.jpg");
-            }
-        }
-
-        &__item:nth-child(3) {
-            .card__top {
-                &::before {
-                    @extend %badge-hit;
-                    top: 12px;
-                }
-            }
-
-            .card__img {
-                background-image: url("../images/products/dragonfruit.jpg");
-            }
-        }
-
-        &__item:nth-child(4) {
-            .card__top {
-                &::before {
-                    @extend %badge-new;
-                }
-            }
-
-            .card__img {
-                background-image: url("../images/products/paprik.jpg");
-            }
-        }
-
-        &__item:nth-child(5) {
-            .card__top {
-                &::before {
-                    @extend %badge-hit;
-                    top: 12px;
-                }
-            }
-
-            .card__img {
-                background-image: url("../images/products/carrot.jpg");
-            }
-        }
-
-        &__item:nth-child(6) {
-            .card__top {
-                &::before {
-                    @extend %badge-30;
-                    top: 12px;
-                }
-            }
-
-            .card__img {
-                background-image: url("../images/products/juice.jpg");
-            }
-
-            @extend %cross-line;
-        }
-
-        &__item:nth-child(7) {
-            .card__top {
-                &::before {
-                    @extend %badge-new;
-                }
-            }
-            .card__img {
-                background-image: url("../images/products/coffee.jpg");
-            }
-        }
-        &__item:nth-child(8) {
-            .card__img {
-                background-image: url("../images/products/ketchup.jpg");
-            }
-        }
-    }
-
-    &__more {
-        display: block;
-        margin: 0 auto;
-        @extend %button;
-        background-color: $white;
-        color: $green-900;
-        border: 1px solid $green-900;
-        transition: background-color 0.3s, box-shadow 0.3s;
-        margin-bottom: 72px;
-
-        &:hover {
-            background-color: $green-100;
-        }
-
-        &:active {
-            background-color: $white;
-            box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        &:focus {
-            background-color: $white;
-            box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
-        }
-    }
-}
-
-.banners {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-
-    &__item {
-        width: 300px;
-        padding: 76px 32px;
-        @extend %img;
-        border-radius: 6px;
-        color: $dark-500;
-        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
-    }
-
-    &__subtitle {
-        @extend %sans-700;
-        font-size: 12px;
-        line-height: 1;
-        margin-bottom: 18px;
-    }
-
-    &__title {
-        color: $dark-500;
-        font-size: 30px;
-        margin-bottom: 12px;
-        text-align: left;
-    }
-
-    &__link {
-        font-size: 14px;
-        border-bottom: 2px solid $dark-500;
-        padding-bottom: 6px;
-    }
-
-    &__item:nth-child(1) {
-        width: 630px;
-        background-image: url("../images/banners/fruits.jpg");
-        color: $white;
-        .banners__title {
-            color: $white;
-        }
-        .banners__link {
-            border-color: $white;
-        }
-    }
-
-    &__item:nth-child(2) {
-        background-image: url("../images/banners/veg.jpg");
-    }
-
-    &__item:nth-child(3) {
-        background-image: url("../images/banners/bread.jpg");
-    }
-}
+@import "slider";
+@import "advantages";
+@import "products";
 
 .promo {
     text-align: center;
@@ -446,7 +44,7 @@
         border-radius: 6px;
         border: 1px solid $silver-600;
         padding: 13px 12px 11px;
-        @extend %badge;
+        // @extend %badge;
         @extend %star;
         text-align: left;
         letter-spacing: 0.03em;
@@ -457,7 +55,7 @@
 
     &__item:nth-child(1) {
         &::before {
-            @extend %badge-new;
+            // @extend %badge-new;
             top: 13px;
             left: 12px;
         }
@@ -474,7 +72,7 @@
 
     &__item:nth-child(2) {
         &::before {
-            @extend %badge-new;
+            // @extend %badge-new;
             top: 13px;
             left: 12px;
         }
@@ -490,7 +88,7 @@
 
     &__item:nth-child(3) {
         &::before {
-            @extend %badge-new;
+            // @extend %badge-new;
             top: 13px;
             left: 12px;
         }
@@ -506,7 +104,7 @@
 
     &__item:nth-child(4) {
         &::before {
-            @extend %badge-new;
+            // @extend %badge-new;
             top: 13px;
             left: 12px;
         }
@@ -521,7 +119,7 @@
     }
     &__item:nth-child(5) {
         &::before {
-            @extend %badge-new;
+            // @extend %badge-new;
             top: 13px;
             left: 12px;
         }
@@ -537,7 +135,7 @@
 
     &__item:nth-child(6) {
         &::before {
-            @extend %badge-hit;
+            // @extend %badge-hit;
             top: 13px;
             left: 12px;
         }
@@ -553,7 +151,7 @@
 
     &__item:nth-child(7) {
         &::before {
-            @extend %badge-hit;
+            // @extend %badge-hit;
             top: 13px;
             left: 12px;
         }
@@ -569,7 +167,7 @@
 
     &__item:nth-child(8) {
         &::before {
-            @extend %badge-hit;
+            // @extend %badge-hit;
             top: 13px;
             left: 12px;
         }
@@ -595,7 +193,7 @@
 
     &__avail {
         text-transform: uppercase;
-        @extend %sans-600;
+        font-weight: 600;
         font-size: 10px;
         line-height: 1;
         margin-bottom: 4px;
@@ -603,7 +201,7 @@
     }
 
     &__price {
-        @extend %sans-600;
+        font-weight: 600;
         font-size: 20px;
         line-height: 1;
     }
@@ -614,7 +212,7 @@
     }
 
     &__old-price {
-        @extend %sans-400;
+        font-weight: 400;
         font-size: 12px;
         line-height: 1;
         margin-right: 40px;
@@ -622,171 +220,6 @@
     }
 }
 
-.footer {
-    background-color: $dark-800;
-    color: $white;
-    @extend %sans-400;
-    font-size: 14px;
-    line-height: 1.4;
-
-    &__wrapper {
-        padding: 30px 0;
-        & .logo {
-            display: block;
-            margin-bottom: 30px;
-        }
-    }
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        align-items: flex-start;
-    }
-
-    &__form {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 300px;
-    }
-
-    &__form p {
-        margin-bottom: 18px;
-    }
-
-    &__form-mail {
-        line-height: 1;
-        background-color: $white;
-        color: #4f4f4f;
-        border-radius: 6px 0 0 6px;
-        max-width: 182px;
-        padding: 12px;
-    }
-
-    &__btn {
-        background-color: $green-900;
-        color: $white;
-        text-transform: uppercase;
-        @extend %sans-700;
-        font-size: 12px;
-        padding: 12px;
-        border-radius: 0 6px 6px 0;
-    }
-
-    &__menu {
-        max-width: 470px;
-        width: 100%;
-        height: 108px;
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: stretch;
-        height: 108px;
-        align-content: space-between;
-    }
-
-    &__item {
-        margin-bottom: 16px;
-    }
-
-    &__communications {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__contacts {
-        margin-bottom: 18px;
-    }
-
-    &__social-list {
-        display: flex;
-    }
-
-    &__social {
-        width: 32px;
-        height: 32px;
-    }
-
-    &__social:not(:last-child) {
-        margin-right: 12px;
-    }
-
-    &__icon {
-        display: block;
-        position: relative;
-        width: 32px;
-        height: 32px;
-    }
-
-    &__icon::before {
-        content: "";
-        position: absolute;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 32px;
-        height: 32px;
-    }
-
-    &__facebook::before {
-        background-image: url("../images/social/facebook.svg");
-    }
-
-    &__youtube::before {
-        background-image: url("../images/social/youtube.svg");
-    }
-
-    &__telegram::before {
-        background-image: url("../images/social/telegram.svg");
-    }
-
-    &__instagram::before {
-        background-image: url("../images/social/instagram.svg");
-    }
-
-    &__bottom {
-        text-transform: uppercase;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 24px 0;
-        border-top: 1px solid rgba($color: $white, $alpha: 0.1);
-    }
-
-    &__banks {
-        display: flex;
-        height: 29px;
-    }
-
-    &__visa,
-    &__mc {
-        margin-right: 24px;
-        position: relative;
-        width: 93px;
-    }
-
-    &__cart::before {
-        content: "";
-        height: 29px;
-        position: absolute;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-    }
-
-    &__visa::before {
-        background-image: url("../images/footer/visa.svg");
-        width: 93px;
-    }
-
-    &__mc::before {
-        background-image: url("../images/footer/mc.svg");
-        width: 49px;
-    }
-}
+@import "footer";
 
 @import "media";

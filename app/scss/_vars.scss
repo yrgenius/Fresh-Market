@@ -1,57 +1,24 @@
-$green-900: #63A60F;
-$green-200: #E0EDCF;
-$green-100: #EFF6E7;
+$green-900: #63a60f;
+$green-200: #e0edcf;
+$green-100: #eff6e7;
 $dark-900: #121212;
-$dark-800: #31352B;
+$dark-800: #31352b;
 $dark-500: #505050;
-$red-900: #CF3E3B;
-$orange-900: #FF7A00;
-$yellow-900: #FFB800;
-$silver-600: #C1C1C1;
-$silver-100: #F6F6F6;
-$white: #FFFFFF;
-%sans-300 {
-    font-family: 'OpenSans-Light', sans-serif;
-    font-weight: 300;
-}
+$red-900: #cf3e3b;
+$orange-900: #ff7a00;
+$yellow-900: #ffb800;
+$silver-600: #c1c1c1;
+$silver-100: #f6f6f6;
+$white: #ffffff;
 
-%sans-400 {
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-weight: 400;
-}
-
-%sans-600 {
-    font-family: 'OpenSans-SemiBold', sans-serif;
-    font-weight: 600;
-}
-
-%sans-700 {
-    font-family: 'OpenSans-Bold', sans-serif;
-    font-weight: 700;
-}
-
-%ruda-400 {
-    font-family: 'Ruda-Regular', sans-serif;
-    font-weight: 400;
-}
-
-%ruda-600 {
-    font-family: 'Ruda-SemiBold', sans-serif;
-    font-weight: 600;
-}
-
-%ruda-700 {
-    font-family: 'Ruda-Bold', sans-serif;
-    font-weight: 700;
-}
-
-%ruda-900 {
-    font-family: 'Ruda-Black', sans-serif;
-    font-weight: 900;
+%img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 %subtitle-menu {
-    @extend %sans-700;
+    font-weight: 700;
     font-size: 15px;
     line-height: 1.4;
     color: $dark-500;
@@ -69,49 +36,30 @@ $white: #FFFFFF;
         transition: opacity 0.3s;
     }
     &:hover::before {
-        opacity: .2;
+        opacity: 0.2;
     }
 }
 
 %button {
     display: inline-block;
-    @extend %sans-400;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.3;
     background-color: $green-900;
     border-radius: 6px;
     color: $white;
     padding: 12px 24px;
-    transition: background-color .3s, box-shadow .3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
     &:hover {
-        background-color: #4D810C;
+        background-color: #4d810c;
     }
-    &:active {
-        background-color: $green-900;
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    &:focus {
-        box-shadow: 0px 0px 0px 4px $green-200;
-    }
-}
-
-%badge {
-    position: relative;
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
-        color: $white;
-        @extend %sans-700;
-        font-size: 10px;
-        line-height: 1;
-        padding: 3px 6px;
-        height: 16px;
-        left: 12px;
-        border-radius: 6px;
-    }
+    // &:active {
+    //     background-color: $green-900;
+    //     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    // }
+    // &:focus {
+    //     box-shadow: 0px 0px 0px 4px $green-200;
+    // }
 }
 
 %star {
@@ -122,7 +70,7 @@ $white: #FFFFFF;
         text-transform: uppercase;
         letter-spacing: 0.03em;
         color: $dark-500;
-        @extend %sans-700;
+        font-weight: 700;
         font-size: 14px;
         line-height: 1.4;
         text-align: left;
@@ -132,89 +80,9 @@ $white: #FFFFFF;
         right: 12px;
         left: auto;
         bottom: 12px;
-        background-image: url('../images/promo/star.svg');
+        background-image: url("../images/promo/star.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: right center;
-    }
-}
-
-%img {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-}
-
-%badge-new {
-    content: "новинка";
-    width: 66px;
-    top: 12px;
-    background: $green-900;
-}
-
-%badge-hit {
-    content: "хит";
-    width: 34px;
-    background: $orange-900;
-}
-
-%badge-30 {
-    content: "-30%";
-    width: 37px;
-    background: $red-900;
-}
-
-%badge-50 {
-    content: "-50%";
-    width: 37px;
-    background: $red-900;
-}
-
-%basket {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 15px;
-    top: 8px;
-    right: 8px;
-    @extend %img;
-    background-image: url('../images/products/icon-cart.svg');
-}
-
-%cross-line {
-    .card__price {
-        span {
-            &::after {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                border-top: 1px solid $silver-600;
-                transform: rotate(160deg);
-                transform-origin: left top;
-            }
-        }
-    }
-}
-
-%heart {
-    .heart {
-        content: "";
-        position: absolute;
-        background-image: url('../images/products/icon-heart.svg');
-        width: 32px;
-        height: 29px;
-        top: 17px;
-        right: 12px;
-        &:hover {
-            content: "";
-            position: absolute;
-            background-image: url('../images/products/icon-heart-hover.svg');
-            width: 32px;
-            height: 29px;
-            top: 17px;
-            right: 12px;
-        }
     }
 }

@@ -1,7 +1,7 @@
 .header {
     &__top {
         background-color: $dark-800;
-        @extend %sans-700;
+        font-weight: 700;
         font-size: 13px;
         line-height: 1.4;
         color: $white;
@@ -78,7 +78,7 @@
         border-radius: 6px;
         margin-right: 30px;
         padding: 15px 38px 15px 61px;
-        @extend %sans-600;
+        font-weight: 600;
         font-size: 14px;
         line-height: 1.4;
         -webkit-appearance: none;
@@ -151,7 +151,7 @@
 
     &__search {
         color: $dark-800;
-        @extend %sans-400;
+        font-weight: 400;
         font-size: 14px;
         line-height: 1.4;
         padding: 15px 52px;
@@ -162,7 +162,7 @@
         color: $white;
         background-color: $dark-800;
         padding: 15px 52px;
-        @extend %sans-600;
+        font-weight: 600;
         font-size: 14px;
         line-height: 1.4;
         text-transform: uppercase;
