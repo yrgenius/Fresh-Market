@@ -129,6 +129,7 @@
             }
 
             &__button {
+                display: inline;
                 width: 32px;
                 height: 32px;
                 border-radius: 6px;
@@ -159,7 +160,6 @@
     &__more {
         display: block;
         margin: 0 auto;
-        @extend %button;
         background-color: $white;
         color: $green-900;
         border: 1px solid $green-900;

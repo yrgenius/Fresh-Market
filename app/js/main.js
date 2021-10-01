@@ -4,6 +4,14 @@ $(function() {
     const select = $('.header__catalog');
     let flagSelect = 0;
 
+    // const mixContainer1 = document.querySelector('.products__list');
+
+    // const mixConfig = {
+    //     controls: {scope: 'local'}
+    // };
+
+    // let mixer1 = mixitup(mixContainer1, mixConfig);
+
     select.on('click blur', function(event) {
         flagSelect = flagSelect + 1;
         let widthCatalog = select[0].clientWidth;
