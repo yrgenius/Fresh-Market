@@ -75,6 +75,11 @@
         align-items: stretch;
         height: 108px;
         align-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 72px;
+        justify-content: space-between;
     }
 
     &__item {
@@ -90,8 +95,9 @@
         margin-bottom: 18px;
     }
 
-    &__social-list {
+    &__list {
         display: flex;
+        justify-content: end;
     }
 
     &__social {

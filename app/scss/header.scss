@@ -188,6 +188,17 @@
         margin-left: auto;
     }
 
+    &__aboveicon {
+        background-color: #fff;
+        border-radius: 50%;
+        color: $red-900;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        position: absolute;
+        padding-top: 3px;
+    }
+
     &__icon {
         &:not(:last-child) {
             margin-right: 11px;
