@@ -97,7 +97,7 @@
 
     &__list {
         display: flex;
-        justify-content: end;
+        justify-content: start;
     }
 
     &__social {
@@ -124,24 +124,25 @@
             width: 32px;
             height: 32px;
         }
+
+        &--facebook::before {
+            background-image: url("../images/social/facebook.svg");
+        }
+
+        &--youtube::before {
+            background-image: url("../images/social/youtube.svg");
+        }
+
+        &--telegram::before {
+            background-image: url("../images/social/telegram.svg");
+        }
+
+        &--instagram::before {
+            background-image: url("../images/social/instagram.svg");
+        }
     }
 
     //TODO: in html
-    &__icon--facebook::before {
-        background-image: url("../images/social/facebook.svg");
-    }
-
-    &__icon--youtube::before {
-        background-image: url("../images/social/youtube.svg");
-    }
-
-    &__icon--telegram::before {
-        background-image: url("../images/social/telegram.svg");
-    }
-
-    &__icon--instagram::before {
-        background-image: url("../images/social/instagram.svg");
-    }
 
     &__bottom {
         text-transform: uppercase;

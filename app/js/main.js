@@ -1,16 +1,27 @@
+// import Swiper  from 'swiper/bundle';
+// import Swiper, { Navigation, Pagination } from 'swiper';
+
+// Swiper.use([Navigation, Pagination]);
+
+// const swiper = new Swiper('.news__container', {
+//     autoplay: 1000,
+//     observer: true,
+//     observeParents: true,
+//     loop: true,
+//     slidesPerView: 5,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         loop: true,
+//     },
+// }); 
+
 $(function() {
 
     let screenWidth = $(window).width();
     const select = $('.header__catalog');
-    let flagSelect = 0;
-
-    // const mixContainer1 = document.querySelector('.products__list');
-
-    // const mixConfig = {
-    //     controls: {scope: 'local'}
-    // };
-
-    // let mixer1 = mixitup(mixContainer1, mixConfig);
+    let flagSelect = 0;  
+    // const swiper = new Swiper(...);
+    
 
     select.on('click blur', function(event) {
         flagSelect = flagSelect + 1;
@@ -39,11 +50,22 @@ $(function() {
         }
 
     });
-    
+
     $('.slider__wrapper').slick({
         dots: false,
         arrows: true
     });
+
+    // $(".news__item").on("mouseover", function(){
+    //     $(".news__massage").css({
+    //         "color": "$green-900",
+    //     });
+    // });
+    
+    // $('.news__brands').slick({
+    //     dots: false,
+    //     arrows: false
+    // });
 
     if (screenWidth - 240 > 1370) {
         $('.slick-prev').css({ 'top': '50%' });
@@ -53,5 +75,6 @@ $(function() {
         $('.slick-next').css({ 'top': '85%' });
     }
 
+    const mixContainer1 = mixitup('.products__list');
 
 });

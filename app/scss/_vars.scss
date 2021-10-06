@@ -40,27 +40,21 @@ $white: #ffffff;
     }
 }
 
-%star {
+.price-old {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
     position: relative;
+    width: fit-content;
+    color: $silver-600;
+
     &::after {
         content: "";
         position: absolute;
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
-        color: $dark-500;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.4;
-        text-align: left;
-        padding: 1px;
-        width: 40px;
-        height: 16px;
-        right: 12px;
-        left: auto;
-        bottom: 12px;
-        background-image: url("../images/promo/star.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right center;
+        height: 100%;
+        width: 100%;
+        border-top: 1px solid $silver-600;
+        transform: rotate(160deg);
+        transform-origin: left top;
     }
 }

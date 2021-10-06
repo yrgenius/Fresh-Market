@@ -10,6 +10,7 @@ const imagecomp = require('compress-images');
 const del = require('del');
 
 
+
 function styles() {
     return src('app/scss/style.scss')
         .pipe(scss({ outputStyle: 'compressed' }))
@@ -22,8 +23,8 @@ function styles() {
 function scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/slick-carousel/slick/slick.js', 
             'node_modules/mixitup/dist/mixitup.min.js',
-            'node_modules/slick-carousel/slick/slick.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))

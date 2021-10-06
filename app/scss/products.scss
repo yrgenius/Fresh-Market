@@ -133,23 +133,23 @@
     &__price {
         color: $dark-500;
         height: 14px;
+        margin-top: 3px;
     }
 
-    &__price--old {
-        margin-bottom: 3px;
-        position: relative;
-        width: fit-content;
-        color: $silver-600;
-        &::after {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            border-top: 1px solid $silver-600;
-            transform: rotate(160deg);
-            transform-origin: left top;
-        }
-    }
+    // &__price--old {
+    //     position: relative;
+    //     width: fit-content;
+    //     color: $silver-600;
+    //     &::after {
+    //         content: "";
+    //         position: absolute;
+    //         height: 100%;
+    //         width: 100%;
+    //         border-top: 1px solid $silver-600;
+    //         transform: rotate(160deg);
+    //         transform-origin: left top;
+    //     }
+    // }
 
     &__button {
         //TODO: fix it

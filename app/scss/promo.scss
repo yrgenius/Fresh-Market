@@ -33,139 +33,23 @@
         border-radius: 6px;
         border: 1px solid $silver-600;
         padding: 13px 12px 11px;
-        // @extend %badge;
-        @extend %star;
         text-align: left;
         letter-spacing: 0.03em;
+        position: relative;
         display: grid;
-        grid-template: 1fr auto auto / 100px 1fr 1fr;
-        // column-gap: 12px;
-    }
-
-    &__item:nth-child(1) {
-        &::before {
-            // @extend %badge-new;
-            top: 13px;
-            left: 12px;
-        }
+        grid-template: 1fr auto auto / 100px 1fr 1fr 42px;
 
         &::after {
-            content: "4.5";
+            content: "";
+            position: absolute;
+            padding: 1px;
+            width: 16px;
+            height: 16px;
             right: 12px;
-        }
-
-        .promo__avail {
-            color: $green-900;
-        }
-    }
-
-    &__item:nth-child(2) {
-        &::before {
-            // @extend %badge-new;
-            top: 13px;
-            left: 12px;
-        }
-
-        &::after {
-            content: "4.9";
-        }
-
-        .promo__avail {
-            color: $red-900;
-        }
-    }
-
-    &__item:nth-child(3) {
-        &::before {
-            // @extend %badge-new;
-            top: 13px;
-            left: 12px;
-        }
-
-        &::after {
-            content: "5.0";
-        }
-
-        .promo__avail {
-            color: $silver-600;
-        }
-    }
-
-    &__item:nth-child(4) {
-        &::before {
-            // @extend %badge-new;
-            top: 13px;
-            left: 12px;
-        }
-
-        &::after {
-            content: "5.0";
-        }
-
-        .promo__avail {
-            color: $green-900;
-        }
-    }
-    &__item:nth-child(5) {
-        &::before {
-            // @extend %badge-new;
-            top: 13px;
-            left: 12px;
-        }
-
-        &::after {
-            content: "4.5";
-        }
-
-        .promo__avail {
-            color: $green-900;
-        }
-    }
-
-    &__item:nth-child(6) {
-        &::before {
-            // @extend %badge-hit;
-            top: 13px;
-            left: 12px;
-        }
-
-        &::after {
-            content: "4.9";
-        }
-
-        .promo__avail {
-            color: $red-900;
-        }
-    }
-
-    &__item:nth-child(7) {
-        &::before {
-            // @extend %badge-hit;
-            top: 13px;
-            left: 12px;
-        }
-
-        &::after {
-            content: "4.8";
-        }
-
-        .promo__avail {
-            color: $green-900;
-        }
-    }
-
-    &__item:nth-child(8) {
-        &::before {
-            // @extend %badge-hit;
-            top: 13px;
-            left: 12px;
-        }
-        &::after {
-            content: "4.6";
-        }
-
-        .promo__avail {
-            color: $green-900;
+            bottom: 12px;
+            @extend %img;
+            background-image: url("../images/promo/star.svg");
+            background-size: contain;
         }
     }
 
@@ -187,24 +71,36 @@
         line-height: 1;
         margin-bottom: 4px;
         grid-column: span 2;
+        color: $green-900;
+
+        &--not {
+            color: $red-900;
+        }
+
+        &--ending {
+            color: $silver-600;
+        }
     }
 
     &__price {
         font-weight: 600;
         font-size: 20px;
         line-height: 1;
-    }
+        grid-column-start: 2;
 
-    &__price span {
-        font-size: 14px;
-        margin-right: 12px;
+        span {
+            font-size: 14px;
+            margin-right: 12px;
+        }
     }
 
     &__old-price {
-        font-weight: 400;
         font-size: 12px;
-        line-height: 1;
         margin-right: 40px;
         align-self: end;
+    }
+
+    &__raiting {
+        align-self: bottom;
     }
 }
